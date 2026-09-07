@@ -1,0 +1,107 @@
+{
+  "@@locale": "pt",
+  "appTitle": "Arcane Scanner",
+  "navScan": "Escanear",
+  "navCollection": "Coleção",
+  "navSettings": "Ajustes",
+  "scanHeadline": "Invoque sua carta",
+  "scanSubtitle": "Fotografe ou envie a imagem de uma carta de Magic para identificá-la",
+  "scanCameraButton": "Abrir câmera",
+  "scanGalleryButton": "Escolher da galeria",
+  "collectionTitle": "Sua coleção",
+  "collectionEmpty": "Nenhuma carta registrada ainda. Escaneie sua primeira carta!",
+  "settingsTitle": "Configurações",
+  "settingsAiSection": "Provedor de IA (fallback)",
+  "comingSoon": "Disponível na iteração {iteration}",
+  "@comingSoon": {
+    "placeholders": {
+      "iteration": {
+        "type": "int"
+      }
+    }
+  },
+  "exportCsv": "Exportar CSV",
+  "exportEmpty": "Nada para exportar ainda — adicione cartas à coleção primeiro.",
+  "exportSuccess": "CSV gerado! Escolha onde salvar ou compartilhar.",
+  "totalsUnique": "Impressões únicas",
+  "totalsQuantity": "Cartas no total",
+  "searchHint": "Buscar por nome...",
+  "filterSet": "Edição",
+  "filterRarity": "Raridade",
+  "filterAll": "Todas",
+  "clearAll": "Limpar tudo",
+  "clearAllConfirmTitle": "Limpar a coleção?",
+  "clearAllConfirmBody": "Todas as cartas serão removidas. Esta ação não pode ser desfeita.",
+  "cancel": "Cancelar",
+  "removeEntry": "Remover carta",
+  "increaseQuantity": "Aumentar quantidade",
+  "decreaseQuantity": "Diminuir quantidade",
+  "collectionLoadError": "Não foi possível carregar a coleção.",
+  "newScan": "Novo scan",
+  "identifyButton": "Identificar",
+  "identifying": "Identificando a carta...",
+  "tryAgain": "Tentar novamente",
+  "quickMode": "Modo rápido",
+  "quickModeSubtitle": "Ao identificar, adiciona 1 unidade automaticamente (NM, EN, sem foil)",
+  "quickModeAdded": "Adicionada à coleção pelo modo rápido (1x, NM, EN).",
+  "addToCollection": "Adicionar à coleção",
+  "addedToCollection": "{name} adicionada à coleção!",
+  "@addedToCollection": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "quantity": "Quantidade",
+  "foil": "Foil",
+  "conditionLabel": "Condição",
+  "languageLabel": "Idioma",
+  "openInScryfall": "Ver no Scryfall",
+  "identifiedByOcr": "Identificada por OCR local (grátis, offline)",
+  "identifiedByAi": "Identificada pela IA (fallback)",
+  "aiSectionHint": "Usada só quando o OCR local não resolve. A chave fica no armazenamento seguro do aparelho e nunca sai dele (exceto para o próprio provedor).",
+  "aiProviderLabel": "Provedor",
+  "apiKeyLabel": "Chave da API",
+  "apiKeyHint": "Cole a chave aqui",
+  "saveKey": "Salvar chave",
+  "keySaved": "Chave salva com segurança.",
+  "keyRemoved": "Chave removida.",
+  "keyConfigured": "Chave configurada",
+  "keyNotConfigured": "Nenhuma chave configurada",
+  "removeKey": "Remover",
+  "importSection": "Importar coleção",
+  "importHint": "Traga sua coleção do app web (JSON) ou de um CSV exportado por este app. Cartas repetidas são mescladas somando a quantidade.",
+  "importJson": "Importar JSON",
+  "importCsv": "Importar CSV",
+  "importing": "Importando...",
+  "importProgress": "Importando {done} de {total}...",
+  "@importProgress": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importDone": "Importação concluída: {imported} cartas importadas, {failed} falharam.",
+  "@importDone": {
+    "placeholders": {
+      "imported": {
+        "type": "int"
+      },
+      "failed": {
+        "type": "int"
+      }
+    }
+  },
+  "cameraAlignHint": "Encaixe a carta na moldura, com o rodapé na faixa destacada",
+  "cameraTorch": "Lanterna",
+  "cameraCapture": "Capturar",
+  "cameraProcessing": "Processando imagem...",
+  "cameraError": "Não foi possível abrir a câmera.",
+  "cameraPermissionDenied": "Permita o acesso à câmera nas configurações do aparelho para escanear cartas.",
+  "back": "Voltar"
+}

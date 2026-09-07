@@ -1,0 +1,100 @@
+{
+  "@@locale": "en",
+  "appTitle": "Arcane Scanner",
+  "navScan": "Scan",
+  "navCollection": "Collection",
+  "navSettings": "Settings",
+  "scanHeadline": "Summon your card",
+  "scanSubtitle": "Take a photo or upload an image of a Magic card to identify it",
+  "scanCameraButton": "Open camera",
+  "scanGalleryButton": "Pick from gallery",
+  "collectionTitle": "Your collection",
+  "collectionEmpty": "No cards registered yet. Scan your first card!",
+  "settingsTitle": "Settings",
+  "settingsAiSection": "AI provider (fallback)",
+  "comingSoon": "Available in iteration {iteration}",
+  "exportCsv": "Export CSV",
+  "exportEmpty": "Nothing to export yet — add cards to your collection first.",
+  "exportSuccess": "CSV generated! Choose where to save or share it.",
+  "totalsUnique": "Unique printings",
+  "totalsQuantity": "Total cards",
+  "searchHint": "Search by name...",
+  "filterSet": "Set",
+  "filterRarity": "Rarity",
+  "filterAll": "All",
+  "clearAll": "Clear all",
+  "clearAllConfirmTitle": "Clear your collection?",
+  "clearAllConfirmBody": "All cards will be removed. This action cannot be undone.",
+  "cancel": "Cancel",
+  "removeEntry": "Remove card",
+  "increaseQuantity": "Increase quantity",
+  "decreaseQuantity": "Decrease quantity",
+  "collectionLoadError": "Could not load your collection.",
+  "newScan": "New scan",
+  "identifyButton": "Identify",
+  "identifying": "Identifying the card...",
+  "tryAgain": "Try again",
+  "quickMode": "Quick mode",
+  "quickModeSubtitle": "On identify, automatically adds 1 copy (NM, EN, non-foil)",
+  "quickModeAdded": "Added to your collection by quick mode (1x, NM, EN).",
+  "addToCollection": "Add to collection",
+  "addedToCollection": "{name} added to your collection!",
+  "@addedToCollection": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "quantity": "Quantity",
+  "foil": "Foil",
+  "conditionLabel": "Condition",
+  "languageLabel": "Language",
+  "openInScryfall": "View on Scryfall",
+  "identifiedByOcr": "Identified by on-device OCR (free, offline)",
+  "identifiedByAi": "Identified by AI (fallback)",
+  "aiSectionHint": "Only used when on-device OCR can't identify the card. Your key is kept in the device's secure storage and never leaves it (except to the provider itself).",
+  "aiProviderLabel": "Provider",
+  "apiKeyLabel": "API key",
+  "apiKeyHint": "Paste your key here",
+  "saveKey": "Save key",
+  "keySaved": "Key saved securely.",
+  "keyRemoved": "Key removed.",
+  "keyConfigured": "Key configured",
+  "keyNotConfigured": "No key configured",
+  "removeKey": "Remove",
+  "importSection": "Import collection",
+  "importHint": "Bring your collection from the web app (JSON) or from a CSV exported by this app. Duplicate cards are merged by adding quantities.",
+  "importJson": "Import JSON",
+  "importCsv": "Import CSV",
+  "importing": "Importing...",
+  "importProgress": "Importing {done} of {total}...",
+  "@importProgress": {
+    "placeholders": {
+      "done": {
+        "type": "int"
+      },
+      "total": {
+        "type": "int"
+      }
+    }
+  },
+  "importDone": "Import finished: {imported} cards imported, {failed} failed.",
+  "@importDone": {
+    "placeholders": {
+      "imported": {
+        "type": "int"
+      },
+      "failed": {
+        "type": "int"
+      }
+    }
+  },
+  "cameraAlignHint": "Fit the card inside the frame, with the footer on the highlighted strip",
+  "cameraTorch": "Torch",
+  "cameraCapture": "Capture",
+  "cameraProcessing": "Processing image...",
+  "cameraError": "Couldn't open the camera.",
+  "cameraPermissionDenied": "Allow camera access in your device settings to scan cards.",
+  "back": "Back"
+}
