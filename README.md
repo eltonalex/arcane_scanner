@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Arcane Scanner
 
 Scanner de cartas de *Magic: The Gathering* em Flutter. Fotografe uma
@@ -211,3 +212,7 @@ Sincronização multi-dispositivo, reconhecimento de várias cartas na mesma
 foto e crop automático de bordas — a arquitetura já deixa espaço para
 adicionar depois.
 ```
+=======
+# arcane-scanner
+Um app Flutter para escanear e gerenciar coleções de cartas de Magic: The Gathering. Migração completa do seu app web original (TanStack Start + React 19 + Tailwind), reconstruído do zero para Android/iOS.
+>>>>>>> 7938ed1e2c13d949e6a32fe0aefd382bd41698b3
