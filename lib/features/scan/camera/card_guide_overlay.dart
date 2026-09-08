@@ -7,7 +7,10 @@ import '../../../data/image/card_cropper.dart';
 /// desenha o contorno da carta (proporção oficial) e destaca a faixa
 /// onde o rodapé (set + collector number) deve ficar.
 class CardGuideOverlay extends StatelessWidget {
-  const CardGuideOverlay({super.key});
+  const CardGuideOverlay({super.key, this.highlight = false});
+
+  /// Quando true (modo automático estabilizando), realça a moldura.
+  final bool highlight;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +18,7 @@ class CardGuideOverlay extends StatelessWidget {
       child: LayoutBuilder(
         builder: (context, constraints) => CustomPaint(
           size: Size(constraints.maxWidth, constraints.maxHeight),
-          painter: _GuidePainter(),
+          painter: _GuidePainter(highlight: highlight),
         ),
       ),
     );
@@ -23,6 +26,10 @@ class CardGuideOverlay extends StatelessWidget {
 }
 
 class _GuidePainter extends CustomPainter {
+  _GuidePainter({required this.highlight});
+
+  final bool highlight;
+
   static const _gold = ArcanePalette.mysticGold;
 
   @override
@@ -48,13 +55,13 @@ class _GuidePainter extends CustomPainter {
       ..fillType = PathFillType.evenOdd;
     canvas.drawPath(scrim, Paint()..color = Colors.black.withValues(alpha: 0.55));
 
-    // Contorno da carta.
+    // Contorno da carta (mais forte quando estabilizando no modo auto).
     canvas.drawRRect(
       rrect,
       Paint()
         ..style = PaintingStyle.stroke
-        ..strokeWidth = 2
-        ..color = _gold.withValues(alpha: 0.9),
+        ..strokeWidth = highlight ? 4 : 2
+        ..color = _gold.withValues(alpha: highlight ? 1 : 0.9),
     );
 
     // Faixa do rodapé.
@@ -117,5 +124,6 @@ class _GuidePainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+  bool shouldRepaint(covariant _GuidePainter oldDelegate) =>
+      oldDelegate.highlight != highlight;
 }

@@ -24,8 +24,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get scanHeadline => 'Summon your card';
 
   @override
-  String get scanSubtitle =>
-      'Take a photo or upload an image of a Magic card to identify it';
+  String get scanSubtitle => 'Take a photo or upload an image of a Magic card to identify it';
 
   @override
   String get scanCameraButton => 'Open camera';
@@ -37,8 +36,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get collectionTitle => 'Your collection';
 
   @override
-  String get collectionEmpty =>
-      'No cards registered yet. Scan your first card!';
+  String get collectionEmpty => 'No cards registered yet. Scan your first card!';
 
   @override
   String get settingsTitle => 'Settings';
@@ -47,20 +45,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingsAiSection => 'AI provider (fallback)';
 
   @override
-  String comingSoon(int iteration) {
-    return 'Available in iteration $iteration';
-  }
-
-  @override
   String get exportCsv => 'Export CSV';
 
   @override
-  String get exportEmpty =>
-      'Nothing to export yet — add cards to your collection first.';
+  String get exportEmpty => 'Nothing to export yet — add cards to your collection first.';
 
   @override
-  String get exportSuccess =>
-      'CSV generated! Choose where to save or share it.';
+  String get exportSuccess => 'CSV generated! Choose where to save or share it.';
 
   @override
   String get totalsUnique => 'Unique printings';
@@ -87,8 +78,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get clearAllConfirmTitle => 'Clear your collection?';
 
   @override
-  String get clearAllConfirmBody =>
-      'All cards will be removed. This action cannot be undone.';
+  String get clearAllConfirmBody => 'All cards will be removed. This action cannot be undone.';
 
   @override
   String get cancel => 'Cancel';
@@ -121,12 +111,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get quickMode => 'Quick mode';
 
   @override
-  String get quickModeSubtitle =>
-      'On identify, automatically adds 1 copy (NM, EN, non-foil)';
+  String get quickModeSubtitle => 'On identify, automatically adds 1 copy (NM, EN, non-foil)';
 
   @override
-  String get quickModeAdded =>
-      'Added to your collection by quick mode (1x, NM, EN).';
+  String get quickModeAdded => 'Added to your collection by quick mode (1x, NM, EN).';
 
   @override
   String get addToCollection => 'Add to collection';
@@ -158,8 +146,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get identifiedByAi => 'Identified by AI (fallback)';
 
   @override
-  String get aiSectionHint =>
-      'Only used when on-device OCR can\'t identify the card. Your key is kept in the device\'s secure storage and never leaves it (except to the provider itself).';
+  String get aiSectionHint => 'Only used when on-device OCR can\'t identify the card. Your key is kept in the device\'s secure storage and never leaves it (except to the provider itself).';
 
   @override
   String get aiProviderLabel => 'Provider';
@@ -192,8 +179,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get importSection => 'Import collection';
 
   @override
-  String get importHint =>
-      'Bring your collection from the web app (JSON) or from a CSV exported by this app. Duplicate cards are merged by adding quantities.';
+  String get importHint => 'Bring your collection from the web app (JSON) or from a CSV exported by this app. Duplicate cards are merged by adding quantities.';
 
   @override
   String get importJson => 'Import JSON';
@@ -215,8 +201,7 @@ class AppLocalizationsEn extends AppLocalizations {
   }
 
   @override
-  String get cameraAlignHint =>
-      'Fit the card inside the frame, with the footer on the highlighted strip';
+  String get cameraAlignHint => 'Fit the card inside the frame, with the footer on the highlighted strip';
 
   @override
   String get cameraTorch => 'Torch';
@@ -231,9 +216,68 @@ class AppLocalizationsEn extends AppLocalizations {
   String get cameraError => 'Couldn\'t open the camera.';
 
   @override
-  String get cameraPermissionDenied =>
-      'Allow camera access in your device settings to scan cards.';
+  String get cameraPermissionDenied => 'Allow camera access in your device settings to scan cards.';
 
   @override
   String get back => 'Back';
+
+  @override
+  String get autoMode => 'Auto';
+
+  @override
+  String get autoWaiting => 'Bring the next card in';
+
+  @override
+  String get autoHold => 'Hold steady...';
+
+  @override
+  String get autoSwap => 'Swap the card';
+
+  @override
+  String get skipCard => 'Skip this card';
+
+  @override
+  String queuedCard(String name) {
+    return '$name queued';
+  }
+
+  @override
+  String reviewChip(int count) {
+    return 'Review ($count)';
+  }
+
+  @override
+  String reviewTitle(int count) {
+    return 'Review ($count)';
+  }
+
+  @override
+  String get reviewEmpty => 'No cards in the queue. Capture some in auto mode.';
+
+  @override
+  String reviewConfirmAll(int count) {
+    return 'Add $count to collection';
+  }
+
+  @override
+  String reviewAdded(int count) {
+    return '$count cards added to your collection.';
+  }
+
+  @override
+  String get reviewDiscard => 'Discard';
+
+  @override
+  String get reviewDiscardTitle => 'Discard the queue?';
+
+  @override
+  String get reviewDiscardBody => 'Captured cards not yet confirmed will be lost.';
+
+  @override
+  String pendingQueueBanner(int count) {
+    return '$count cards awaiting review';
+  }
+
+  @override
+  String get reviewAction => 'Review';
 }

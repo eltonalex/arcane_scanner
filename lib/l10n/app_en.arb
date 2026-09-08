@@ -12,7 +12,6 @@
   "collectionEmpty": "No cards registered yet. Scan your first card!",
   "settingsTitle": "Settings",
   "settingsAiSection": "AI provider (fallback)",
-  "comingSoon": "Available in iteration {iteration}",
   "exportCsv": "Export CSV",
   "exportEmpty": "Nothing to export yet — add cards to your collection first.",
   "exportSuccess": "CSV generated! Choose where to save or share it.",
@@ -96,5 +95,63 @@
   "cameraProcessing": "Processing image...",
   "cameraError": "Couldn't open the camera.",
   "cameraPermissionDenied": "Allow camera access in your device settings to scan cards.",
-  "back": "Back"
+  "back": "Back",
+  "autoMode": "Auto",
+  "autoWaiting": "Bring the next card in",
+  "autoHold": "Hold steady...",
+  "autoSwap": "Swap the card",
+  "skipCard": "Skip this card",
+  "queuedCard": "{name} queued",
+  "@queuedCard": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewChip": "Review ({count})",
+  "@reviewChip": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewTitle": "Review ({count})",
+  "@reviewTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewEmpty": "No cards in the queue. Capture some in auto mode.",
+  "reviewConfirmAll": "Add {count} to collection",
+  "@reviewConfirmAll": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewAdded": "{count} cards added to your collection.",
+  "@reviewAdded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewDiscard": "Discard",
+  "reviewDiscardTitle": "Discard the queue?",
+  "reviewDiscardBody": "Captured cards not yet confirmed will be lost.",
+  "pendingQueueBanner": "{count} cards awaiting review",
+  "@pendingQueueBanner": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewAction": "Review"
 }

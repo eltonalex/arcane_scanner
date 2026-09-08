@@ -1,5 +1,0 @@
-arb-dir: lib/l10n
-template-arb-file: app_pt.arb
-output-localization-file: app_localizations.dart
-# Em Flutter < 3.27, adicione a linha abaixo para gerar dentro de lib/l10n:
-# synthetic-package: false

@@ -24,8 +24,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get scanHeadline => 'Invoque sua carta';
 
   @override
-  String get scanSubtitle =>
-      'Fotografe ou envie a imagem de uma carta de Magic para identificá-la';
+  String get scanSubtitle => 'Fotografe ou envie a imagem de uma carta de Magic para identificá-la';
 
   @override
   String get scanCameraButton => 'Abrir câmera';
@@ -37,8 +36,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get collectionTitle => 'Sua coleção';
 
   @override
-  String get collectionEmpty =>
-      'Nenhuma carta registrada ainda. Escaneie sua primeira carta!';
+  String get collectionEmpty => 'Nenhuma carta registrada ainda. Escaneie sua primeira carta!';
 
   @override
   String get settingsTitle => 'Configurações';
@@ -47,20 +45,13 @@ class AppLocalizationsPt extends AppLocalizations {
   String get settingsAiSection => 'Provedor de IA (fallback)';
 
   @override
-  String comingSoon(int iteration) {
-    return 'Disponível na iteração $iteration';
-  }
-
-  @override
   String get exportCsv => 'Exportar CSV';
 
   @override
-  String get exportEmpty =>
-      'Nada para exportar ainda — adicione cartas à coleção primeiro.';
+  String get exportEmpty => 'Nada para exportar ainda — adicione cartas à coleção primeiro.';
 
   @override
-  String get exportSuccess =>
-      'CSV gerado! Escolha onde salvar ou compartilhar.';
+  String get exportSuccess => 'CSV gerado! Escolha onde salvar ou compartilhar.';
 
   @override
   String get totalsUnique => 'Impressões únicas';
@@ -87,8 +78,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get clearAllConfirmTitle => 'Limpar a coleção?';
 
   @override
-  String get clearAllConfirmBody =>
-      'Todas as cartas serão removidas. Esta ação não pode ser desfeita.';
+  String get clearAllConfirmBody => 'Todas as cartas serão removidas. Esta ação não pode ser desfeita.';
 
   @override
   String get cancel => 'Cancelar';
@@ -121,12 +111,10 @@ class AppLocalizationsPt extends AppLocalizations {
   String get quickMode => 'Modo rápido';
 
   @override
-  String get quickModeSubtitle =>
-      'Ao identificar, adiciona 1 unidade automaticamente (NM, EN, sem foil)';
+  String get quickModeSubtitle => 'Ao identificar, adiciona 1 unidade automaticamente (NM, EN, sem foil)';
 
   @override
-  String get quickModeAdded =>
-      'Adicionada à coleção pelo modo rápido (1x, NM, EN).';
+  String get quickModeAdded => 'Adicionada à coleção pelo modo rápido (1x, NM, EN).';
 
   @override
   String get addToCollection => 'Adicionar à coleção';
@@ -158,8 +146,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get identifiedByAi => 'Identificada pela IA (fallback)';
 
   @override
-  String get aiSectionHint =>
-      'Usada só quando o OCR local não resolve. A chave fica no armazenamento seguro do aparelho e nunca sai dele (exceto para o próprio provedor).';
+  String get aiSectionHint => 'Usada só quando o OCR local não resolve. A chave fica no armazenamento seguro do aparelho e nunca sai dele (exceto para o próprio provedor).';
 
   @override
   String get aiProviderLabel => 'Provedor';
@@ -192,8 +179,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get importSection => 'Importar coleção';
 
   @override
-  String get importHint =>
-      'Traga sua coleção do app web (JSON) ou de um CSV exportado por este app. Cartas repetidas são mescladas somando a quantidade.';
+  String get importHint => 'Traga sua coleção do app web (JSON) ou de um CSV exportado por este app. Cartas repetidas são mescladas somando a quantidade.';
 
   @override
   String get importJson => 'Importar JSON';
@@ -215,8 +201,7 @@ class AppLocalizationsPt extends AppLocalizations {
   }
 
   @override
-  String get cameraAlignHint =>
-      'Encaixe a carta na moldura, com o rodapé na faixa destacada';
+  String get cameraAlignHint => 'Encaixe a carta na moldura, com o rodapé na faixa destacada';
 
   @override
   String get cameraTorch => 'Lanterna';
@@ -231,9 +216,68 @@ class AppLocalizationsPt extends AppLocalizations {
   String get cameraError => 'Não foi possível abrir a câmera.';
 
   @override
-  String get cameraPermissionDenied =>
-      'Permita o acesso à câmera nas configurações do aparelho para escanear cartas.';
+  String get cameraPermissionDenied => 'Permita o acesso à câmera nas configurações do aparelho para escanear cartas.';
 
   @override
   String get back => 'Voltar';
+
+  @override
+  String get autoMode => 'Auto';
+
+  @override
+  String get autoWaiting => 'Aproxime a próxima carta';
+
+  @override
+  String get autoHold => 'Segure firme...';
+
+  @override
+  String get autoSwap => 'Troque a carta';
+
+  @override
+  String get skipCard => 'Pular esta carta';
+
+  @override
+  String queuedCard(String name) {
+    return '$name na fila';
+  }
+
+  @override
+  String reviewChip(int count) {
+    return 'Revisar ($count)';
+  }
+
+  @override
+  String reviewTitle(int count) {
+    return 'Revisar ($count)';
+  }
+
+  @override
+  String get reviewEmpty => 'Nenhuma carta na fila. Capture algumas no modo automático.';
+
+  @override
+  String reviewConfirmAll(int count) {
+    return 'Adicionar $count à coleção';
+  }
+
+  @override
+  String reviewAdded(int count) {
+    return '$count cartas adicionadas à coleção.';
+  }
+
+  @override
+  String get reviewDiscard => 'Descartar';
+
+  @override
+  String get reviewDiscardTitle => 'Descartar a fila?';
+
+  @override
+  String get reviewDiscardBody => 'As cartas capturadas ainda não confirmadas serão perdidas.';
+
+  @override
+  String pendingQueueBanner(int count) {
+    return '$count cartas aguardando revisão';
+  }
+
+  @override
+  String get reviewAction => 'Revisar';
 }

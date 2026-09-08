@@ -62,8 +62,7 @@ import 'app_localizations_pt.dart';
 /// be consistent with the languages listed in the AppLocalizations.supportedLocales
 /// property.
 abstract class AppLocalizations {
-  AppLocalizations(String locale)
-      : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -71,8 +70,7 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate =
-      _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -84,8 +82,7 @@ abstract class AppLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
-      <LocalizationsDelegate<dynamic>>[
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
     delegate,
     GlobalMaterialLocalizations.delegate,
     GlobalCupertinoLocalizations.delegate,
@@ -100,427 +97,516 @@ abstract class AppLocalizations {
 
   /// No description provided for @appTitle.
   ///
-  /// In pt, this message translates to:
+  /// In en, this message translates to:
   /// **'Arcane Scanner'**
   String get appTitle;
 
   /// No description provided for @navScan.
   ///
-  /// In pt, this message translates to:
-  /// **'Escanear'**
+  /// In en, this message translates to:
+  /// **'Scan'**
   String get navScan;
 
   /// No description provided for @navCollection.
   ///
-  /// In pt, this message translates to:
-  /// **'Coleção'**
+  /// In en, this message translates to:
+  /// **'Collection'**
   String get navCollection;
 
   /// No description provided for @navSettings.
   ///
-  /// In pt, this message translates to:
-  /// **'Ajustes'**
+  /// In en, this message translates to:
+  /// **'Settings'**
   String get navSettings;
 
   /// No description provided for @scanHeadline.
   ///
-  /// In pt, this message translates to:
-  /// **'Invoque sua carta'**
+  /// In en, this message translates to:
+  /// **'Summon your card'**
   String get scanHeadline;
 
   /// No description provided for @scanSubtitle.
   ///
-  /// In pt, this message translates to:
-  /// **'Fotografe ou envie a imagem de uma carta de Magic para identificá-la'**
+  /// In en, this message translates to:
+  /// **'Take a photo or upload an image of a Magic card to identify it'**
   String get scanSubtitle;
 
   /// No description provided for @scanCameraButton.
   ///
-  /// In pt, this message translates to:
-  /// **'Abrir câmera'**
+  /// In en, this message translates to:
+  /// **'Open camera'**
   String get scanCameraButton;
 
   /// No description provided for @scanGalleryButton.
   ///
-  /// In pt, this message translates to:
-  /// **'Escolher da galeria'**
+  /// In en, this message translates to:
+  /// **'Pick from gallery'**
   String get scanGalleryButton;
 
   /// No description provided for @collectionTitle.
   ///
-  /// In pt, this message translates to:
-  /// **'Sua coleção'**
+  /// In en, this message translates to:
+  /// **'Your collection'**
   String get collectionTitle;
 
   /// No description provided for @collectionEmpty.
   ///
-  /// In pt, this message translates to:
-  /// **'Nenhuma carta registrada ainda. Escaneie sua primeira carta!'**
+  /// In en, this message translates to:
+  /// **'No cards registered yet. Scan your first card!'**
   String get collectionEmpty;
 
   /// No description provided for @settingsTitle.
   ///
-  /// In pt, this message translates to:
-  /// **'Configurações'**
+  /// In en, this message translates to:
+  /// **'Settings'**
   String get settingsTitle;
 
   /// No description provided for @settingsAiSection.
   ///
-  /// In pt, this message translates to:
-  /// **'Provedor de IA (fallback)'**
+  /// In en, this message translates to:
+  /// **'AI provider (fallback)'**
   String get settingsAiSection;
-
-  /// No description provided for @comingSoon.
-  ///
-  /// In pt, this message translates to:
-  /// **'Disponível na iteração {iteration}'**
-  String comingSoon(int iteration);
 
   /// No description provided for @exportCsv.
   ///
-  /// In pt, this message translates to:
-  /// **'Exportar CSV'**
+  /// In en, this message translates to:
+  /// **'Export CSV'**
   String get exportCsv;
 
   /// No description provided for @exportEmpty.
   ///
-  /// In pt, this message translates to:
-  /// **'Nada para exportar ainda — adicione cartas à coleção primeiro.'**
+  /// In en, this message translates to:
+  /// **'Nothing to export yet — add cards to your collection first.'**
   String get exportEmpty;
 
   /// No description provided for @exportSuccess.
   ///
-  /// In pt, this message translates to:
-  /// **'CSV gerado! Escolha onde salvar ou compartilhar.'**
+  /// In en, this message translates to:
+  /// **'CSV generated! Choose where to save or share it.'**
   String get exportSuccess;
 
   /// No description provided for @totalsUnique.
   ///
-  /// In pt, this message translates to:
-  /// **'Impressões únicas'**
+  /// In en, this message translates to:
+  /// **'Unique printings'**
   String get totalsUnique;
 
   /// No description provided for @totalsQuantity.
   ///
-  /// In pt, this message translates to:
-  /// **'Cartas no total'**
+  /// In en, this message translates to:
+  /// **'Total cards'**
   String get totalsQuantity;
 
   /// No description provided for @searchHint.
   ///
-  /// In pt, this message translates to:
-  /// **'Buscar por nome...'**
+  /// In en, this message translates to:
+  /// **'Search by name...'**
   String get searchHint;
 
   /// No description provided for @filterSet.
   ///
-  /// In pt, this message translates to:
-  /// **'Edição'**
+  /// In en, this message translates to:
+  /// **'Set'**
   String get filterSet;
 
   /// No description provided for @filterRarity.
   ///
-  /// In pt, this message translates to:
-  /// **'Raridade'**
+  /// In en, this message translates to:
+  /// **'Rarity'**
   String get filterRarity;
 
   /// No description provided for @filterAll.
   ///
-  /// In pt, this message translates to:
-  /// **'Todas'**
+  /// In en, this message translates to:
+  /// **'All'**
   String get filterAll;
 
   /// No description provided for @clearAll.
   ///
-  /// In pt, this message translates to:
-  /// **'Limpar tudo'**
+  /// In en, this message translates to:
+  /// **'Clear all'**
   String get clearAll;
 
   /// No description provided for @clearAllConfirmTitle.
   ///
-  /// In pt, this message translates to:
-  /// **'Limpar a coleção?'**
+  /// In en, this message translates to:
+  /// **'Clear your collection?'**
   String get clearAllConfirmTitle;
 
   /// No description provided for @clearAllConfirmBody.
   ///
-  /// In pt, this message translates to:
-  /// **'Todas as cartas serão removidas. Esta ação não pode ser desfeita.'**
+  /// In en, this message translates to:
+  /// **'All cards will be removed. This action cannot be undone.'**
   String get clearAllConfirmBody;
 
   /// No description provided for @cancel.
   ///
-  /// In pt, this message translates to:
-  /// **'Cancelar'**
+  /// In en, this message translates to:
+  /// **'Cancel'**
   String get cancel;
 
   /// No description provided for @removeEntry.
   ///
-  /// In pt, this message translates to:
-  /// **'Remover carta'**
+  /// In en, this message translates to:
+  /// **'Remove card'**
   String get removeEntry;
 
   /// No description provided for @increaseQuantity.
   ///
-  /// In pt, this message translates to:
-  /// **'Aumentar quantidade'**
+  /// In en, this message translates to:
+  /// **'Increase quantity'**
   String get increaseQuantity;
 
   /// No description provided for @decreaseQuantity.
   ///
-  /// In pt, this message translates to:
-  /// **'Diminuir quantidade'**
+  /// In en, this message translates to:
+  /// **'Decrease quantity'**
   String get decreaseQuantity;
 
   /// No description provided for @collectionLoadError.
   ///
-  /// In pt, this message translates to:
-  /// **'Não foi possível carregar a coleção.'**
+  /// In en, this message translates to:
+  /// **'Could not load your collection.'**
   String get collectionLoadError;
 
   /// No description provided for @newScan.
   ///
-  /// In pt, this message translates to:
-  /// **'Novo scan'**
+  /// In en, this message translates to:
+  /// **'New scan'**
   String get newScan;
 
   /// No description provided for @identifyButton.
   ///
-  /// In pt, this message translates to:
-  /// **'Identificar'**
+  /// In en, this message translates to:
+  /// **'Identify'**
   String get identifyButton;
 
   /// No description provided for @identifying.
   ///
-  /// In pt, this message translates to:
-  /// **'Identificando a carta...'**
+  /// In en, this message translates to:
+  /// **'Identifying the card...'**
   String get identifying;
 
   /// No description provided for @tryAgain.
   ///
-  /// In pt, this message translates to:
-  /// **'Tentar novamente'**
+  /// In en, this message translates to:
+  /// **'Try again'**
   String get tryAgain;
 
   /// No description provided for @quickMode.
   ///
-  /// In pt, this message translates to:
-  /// **'Modo rápido'**
+  /// In en, this message translates to:
+  /// **'Quick mode'**
   String get quickMode;
 
   /// No description provided for @quickModeSubtitle.
   ///
-  /// In pt, this message translates to:
-  /// **'Ao identificar, adiciona 1 unidade automaticamente (NM, EN, sem foil)'**
+  /// In en, this message translates to:
+  /// **'On identify, automatically adds 1 copy (NM, EN, non-foil)'**
   String get quickModeSubtitle;
 
   /// No description provided for @quickModeAdded.
   ///
-  /// In pt, this message translates to:
-  /// **'Adicionada à coleção pelo modo rápido (1x, NM, EN).'**
+  /// In en, this message translates to:
+  /// **'Added to your collection by quick mode (1x, NM, EN).'**
   String get quickModeAdded;
 
   /// No description provided for @addToCollection.
   ///
-  /// In pt, this message translates to:
-  /// **'Adicionar à coleção'**
+  /// In en, this message translates to:
+  /// **'Add to collection'**
   String get addToCollection;
 
   /// No description provided for @addedToCollection.
   ///
-  /// In pt, this message translates to:
-  /// **'{name} adicionada à coleção!'**
+  /// In en, this message translates to:
+  /// **'{name} added to your collection!'**
   String addedToCollection(String name);
 
   /// No description provided for @quantity.
   ///
-  /// In pt, this message translates to:
-  /// **'Quantidade'**
+  /// In en, this message translates to:
+  /// **'Quantity'**
   String get quantity;
 
   /// No description provided for @foil.
   ///
-  /// In pt, this message translates to:
+  /// In en, this message translates to:
   /// **'Foil'**
   String get foil;
 
   /// No description provided for @conditionLabel.
   ///
-  /// In pt, this message translates to:
-  /// **'Condição'**
+  /// In en, this message translates to:
+  /// **'Condition'**
   String get conditionLabel;
 
   /// No description provided for @languageLabel.
   ///
-  /// In pt, this message translates to:
-  /// **'Idioma'**
+  /// In en, this message translates to:
+  /// **'Language'**
   String get languageLabel;
 
   /// No description provided for @openInScryfall.
   ///
-  /// In pt, this message translates to:
-  /// **'Ver no Scryfall'**
+  /// In en, this message translates to:
+  /// **'View on Scryfall'**
   String get openInScryfall;
 
   /// No description provided for @identifiedByOcr.
   ///
-  /// In pt, this message translates to:
-  /// **'Identificada por OCR local (grátis, offline)'**
+  /// In en, this message translates to:
+  /// **'Identified by on-device OCR (free, offline)'**
   String get identifiedByOcr;
 
   /// No description provided for @identifiedByAi.
   ///
-  /// In pt, this message translates to:
-  /// **'Identificada pela IA (fallback)'**
+  /// In en, this message translates to:
+  /// **'Identified by AI (fallback)'**
   String get identifiedByAi;
 
   /// No description provided for @aiSectionHint.
   ///
-  /// In pt, this message translates to:
-  /// **'Usada só quando o OCR local não resolve. A chave fica no armazenamento seguro do aparelho e nunca sai dele (exceto para o próprio provedor).'**
+  /// In en, this message translates to:
+  /// **'Only used when on-device OCR can\'t identify the card. Your key is kept in the device\'s secure storage and never leaves it (except to the provider itself).'**
   String get aiSectionHint;
 
   /// No description provided for @aiProviderLabel.
   ///
-  /// In pt, this message translates to:
-  /// **'Provedor'**
+  /// In en, this message translates to:
+  /// **'Provider'**
   String get aiProviderLabel;
 
   /// No description provided for @apiKeyLabel.
   ///
-  /// In pt, this message translates to:
-  /// **'Chave da API'**
+  /// In en, this message translates to:
+  /// **'API key'**
   String get apiKeyLabel;
 
   /// No description provided for @apiKeyHint.
   ///
-  /// In pt, this message translates to:
-  /// **'Cole a chave aqui'**
+  /// In en, this message translates to:
+  /// **'Paste your key here'**
   String get apiKeyHint;
 
   /// No description provided for @saveKey.
   ///
-  /// In pt, this message translates to:
-  /// **'Salvar chave'**
+  /// In en, this message translates to:
+  /// **'Save key'**
   String get saveKey;
 
   /// No description provided for @keySaved.
   ///
-  /// In pt, this message translates to:
-  /// **'Chave salva com segurança.'**
+  /// In en, this message translates to:
+  /// **'Key saved securely.'**
   String get keySaved;
 
   /// No description provided for @keyRemoved.
   ///
-  /// In pt, this message translates to:
-  /// **'Chave removida.'**
+  /// In en, this message translates to:
+  /// **'Key removed.'**
   String get keyRemoved;
 
   /// No description provided for @keyConfigured.
   ///
-  /// In pt, this message translates to:
-  /// **'Chave configurada'**
+  /// In en, this message translates to:
+  /// **'Key configured'**
   String get keyConfigured;
 
   /// No description provided for @keyNotConfigured.
   ///
-  /// In pt, this message translates to:
-  /// **'Nenhuma chave configurada'**
+  /// In en, this message translates to:
+  /// **'No key configured'**
   String get keyNotConfigured;
 
   /// No description provided for @removeKey.
   ///
-  /// In pt, this message translates to:
-  /// **'Remover'**
+  /// In en, this message translates to:
+  /// **'Remove'**
   String get removeKey;
 
   /// No description provided for @importSection.
   ///
-  /// In pt, this message translates to:
-  /// **'Importar coleção'**
+  /// In en, this message translates to:
+  /// **'Import collection'**
   String get importSection;
 
   /// No description provided for @importHint.
   ///
-  /// In pt, this message translates to:
-  /// **'Traga sua coleção do app web (JSON) ou de um CSV exportado por este app. Cartas repetidas são mescladas somando a quantidade.'**
+  /// In en, this message translates to:
+  /// **'Bring your collection from the web app (JSON) or from a CSV exported by this app. Duplicate cards are merged by adding quantities.'**
   String get importHint;
 
   /// No description provided for @importJson.
   ///
-  /// In pt, this message translates to:
-  /// **'Importar JSON'**
+  /// In en, this message translates to:
+  /// **'Import JSON'**
   String get importJson;
 
   /// No description provided for @importCsv.
   ///
-  /// In pt, this message translates to:
-  /// **'Importar CSV'**
+  /// In en, this message translates to:
+  /// **'Import CSV'**
   String get importCsv;
 
   /// No description provided for @importing.
   ///
-  /// In pt, this message translates to:
-  /// **'Importando...'**
+  /// In en, this message translates to:
+  /// **'Importing...'**
   String get importing;
 
   /// No description provided for @importProgress.
   ///
-  /// In pt, this message translates to:
-  /// **'Importando {done} de {total}...'**
+  /// In en, this message translates to:
+  /// **'Importing {done} of {total}...'**
   String importProgress(int done, int total);
 
   /// No description provided for @importDone.
   ///
-  /// In pt, this message translates to:
-  /// **'Importação concluída: {imported} cartas importadas, {failed} falharam.'**
+  /// In en, this message translates to:
+  /// **'Import finished: {imported} cards imported, {failed} failed.'**
   String importDone(int imported, int failed);
 
   /// No description provided for @cameraAlignHint.
   ///
-  /// In pt, this message translates to:
-  /// **'Encaixe a carta na moldura, com o rodapé na faixa destacada'**
+  /// In en, this message translates to:
+  /// **'Fit the card inside the frame, with the footer on the highlighted strip'**
   String get cameraAlignHint;
 
   /// No description provided for @cameraTorch.
   ///
-  /// In pt, this message translates to:
-  /// **'Lanterna'**
+  /// In en, this message translates to:
+  /// **'Torch'**
   String get cameraTorch;
 
   /// No description provided for @cameraCapture.
   ///
-  /// In pt, this message translates to:
-  /// **'Capturar'**
+  /// In en, this message translates to:
+  /// **'Capture'**
   String get cameraCapture;
 
   /// No description provided for @cameraProcessing.
   ///
-  /// In pt, this message translates to:
-  /// **'Processando imagem...'**
+  /// In en, this message translates to:
+  /// **'Processing image...'**
   String get cameraProcessing;
 
   /// No description provided for @cameraError.
   ///
-  /// In pt, this message translates to:
-  /// **'Não foi possível abrir a câmera.'**
+  /// In en, this message translates to:
+  /// **'Couldn\'t open the camera.'**
   String get cameraError;
 
   /// No description provided for @cameraPermissionDenied.
   ///
-  /// In pt, this message translates to:
-  /// **'Permita o acesso à câmera nas configurações do aparelho para escanear cartas.'**
+  /// In en, this message translates to:
+  /// **'Allow camera access in your device settings to scan cards.'**
   String get cameraPermissionDenied;
 
   /// No description provided for @back.
   ///
-  /// In pt, this message translates to:
-  /// **'Voltar'**
+  /// In en, this message translates to:
+  /// **'Back'**
   String get back;
+
+  /// No description provided for @autoMode.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto'**
+  String get autoMode;
+
+  /// No description provided for @autoWaiting.
+  ///
+  /// In en, this message translates to:
+  /// **'Bring the next card in'**
+  String get autoWaiting;
+
+  /// No description provided for @autoHold.
+  ///
+  /// In en, this message translates to:
+  /// **'Hold steady...'**
+  String get autoHold;
+
+  /// No description provided for @autoSwap.
+  ///
+  /// In en, this message translates to:
+  /// **'Swap the card'**
+  String get autoSwap;
+
+  /// No description provided for @skipCard.
+  ///
+  /// In en, this message translates to:
+  /// **'Skip this card'**
+  String get skipCard;
+
+  /// No description provided for @queuedCard.
+  ///
+  /// In en, this message translates to:
+  /// **'{name} queued'**
+  String queuedCard(String name);
+
+  /// No description provided for @reviewChip.
+  ///
+  /// In en, this message translates to:
+  /// **'Review ({count})'**
+  String reviewChip(int count);
+
+  /// No description provided for @reviewTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Review ({count})'**
+  String reviewTitle(int count);
+
+  /// No description provided for @reviewEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No cards in the queue. Capture some in auto mode.'**
+  String get reviewEmpty;
+
+  /// No description provided for @reviewConfirmAll.
+  ///
+  /// In en, this message translates to:
+  /// **'Add {count} to collection'**
+  String reviewConfirmAll(int count);
+
+  /// No description provided for @reviewAdded.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} cards added to your collection.'**
+  String reviewAdded(int count);
+
+  /// No description provided for @reviewDiscard.
+  ///
+  /// In en, this message translates to:
+  /// **'Discard'**
+  String get reviewDiscard;
+
+  /// No description provided for @reviewDiscardTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Discard the queue?'**
+  String get reviewDiscardTitle;
+
+  /// No description provided for @reviewDiscardBody.
+  ///
+  /// In en, this message translates to:
+  /// **'Captured cards not yet confirmed will be lost.'**
+  String get reviewDiscardBody;
+
+  /// No description provided for @pendingQueueBanner.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} cards awaiting review'**
+  String pendingQueueBanner(int count);
+
+  /// No description provided for @reviewAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Review'**
+  String get reviewAction;
 }
 
-class _AppLocalizationsDelegate
-    extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   @override
@@ -529,25 +615,25 @@ class _AppLocalizationsDelegate
   }
 
   @override
-  bool isSupported(Locale locale) =>
-      <String>['en', 'pt'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['en', 'pt'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 }
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
+
+
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'en':
-      return AppLocalizationsEn();
-    case 'pt':
-      return AppLocalizationsPt();
+    case 'en': return AppLocalizationsEn();
+    case 'pt': return AppLocalizationsPt();
   }
 
   throw FlutterError(
-      'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
-      'an issue with the localizations generation tool. Please file an issue '
-      'on GitHub with a reproducible sample app and the gen-l10n configuration '
-      'that was used.');
+    'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+    'an issue with the localizations generation tool. Please file an issue '
+    'on GitHub with a reproducible sample app and the gen-l10n configuration '
+    'that was used.'
+  );
 }

@@ -10,7 +10,6 @@ import '../../data/ai/ai_config.dart';
 import '../../data/card_identification_service.dart';
 import '../../data/ocr/ocr_card_reader.dart';
 import '../../data/scryfall_api.dart';
-import '../../domain/models/collection_entry.dart';
 import '../../domain/models/condition.dart';
 import '../../domain/models/language.dart';
 import '../collection/collection_controller.dart';
@@ -187,24 +186,12 @@ class ScanController extends Notifier<ScanState> {
     Condition condition = Condition.nm,
     Language? language,
   }) async {
-    final card = identified.card;
-    final entry = CollectionEntry(
-      scryfallId: card.id,
-      name: card.name,
-      setCode: card.setCode,
-      setName: card.setName,
-      collectorNumber: card.collectorNumber,
-      rarity: card.rarity,
-      imageUrl: card.imageSmall ?? card.imageNormal,
-      scryfallUri: card.scryfallUri,
+    final entry = buildCollectionEntry(
+      identified,
       quantity: quantity,
       foil: foil,
       condition: condition,
-      language:
-          language ?? identified.identification.language ?? Language.en,
-      priceUsdAtAdd: card.priceUsd,
-      priceEurAtAdd: card.priceEur,
-      addedAt: DateTime.now().toUtc(),
+      language: language,
     );
     await ref.read(collectionRepositoryProvider).add(entry);
   }

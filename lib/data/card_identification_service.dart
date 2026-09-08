@@ -2,11 +2,45 @@ import 'dart:typed_data';
 
 import '../core/result.dart';
 import '../domain/models/card_identification.dart';
+import '../domain/models/collection_entry.dart';
+import '../domain/models/condition.dart';
+import '../domain/models/language.dart';
 import '../domain/models/scryfall_card.dart';
 import 'ai/ai_config.dart';
 import 'ocr/ocr_card_reader.dart';
 import 'ocr/ocr_text_parser.dart';
 import 'scryfall_api.dart';
+
+/// Monta uma entrada de coleção a partir de uma carta identificada +
+/// atributos escolhidos pelo usuário. Reutilizado pelo scan manual,
+/// pela fila de revisão e por onde mais precisar (evita duplicação).
+CollectionEntry buildCollectionEntry(
+  IdentifiedCard identified, {
+  int quantity = 1,
+  bool foil = false,
+  Condition condition = Condition.nm,
+  Language? language,
+}) {
+  final card = identified.card;
+  return CollectionEntry(
+    scryfallId: card.id,
+    name: card.name,
+    setCode: card.setCode,
+    setName: card.setName,
+    collectorNumber: card.collectorNumber,
+    rarity: card.rarity,
+    imageUrl: card.imageSmall ?? card.imageNormal,
+    scryfallUri: card.scryfallUri,
+    quantity: quantity,
+    foil: foil,
+    condition: condition,
+    language: language ?? identified.identification.language ?? Language.en,
+    priceUsdAtAdd: card.priceUsd,
+    priceEurAtAdd: card.priceEur,
+    addedAt: DateTime.now().toUtc(),
+  );
+}
+
 
 /// Resultado final: a carta do Scryfall + como ela foi identificada.
 class IdentifiedCard {

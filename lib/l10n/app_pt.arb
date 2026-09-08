@@ -12,14 +12,6 @@
   "collectionEmpty": "Nenhuma carta registrada ainda. Escaneie sua primeira carta!",
   "settingsTitle": "Configurações",
   "settingsAiSection": "Provedor de IA (fallback)",
-  "comingSoon": "Disponível na iteração {iteration}",
-  "@comingSoon": {
-    "placeholders": {
-      "iteration": {
-        "type": "int"
-      }
-    }
-  },
   "exportCsv": "Exportar CSV",
   "exportEmpty": "Nada para exportar ainda — adicione cartas à coleção primeiro.",
   "exportSuccess": "CSV gerado! Escolha onde salvar ou compartilhar.",
@@ -103,5 +95,63 @@
   "cameraProcessing": "Processando imagem...",
   "cameraError": "Não foi possível abrir a câmera.",
   "cameraPermissionDenied": "Permita o acesso à câmera nas configurações do aparelho para escanear cartas.",
-  "back": "Voltar"
+  "back": "Voltar",
+  "autoMode": "Auto",
+  "autoWaiting": "Aproxime a próxima carta",
+  "autoHold": "Segure firme...",
+  "autoSwap": "Troque a carta",
+  "skipCard": "Pular esta carta",
+  "queuedCard": "{name} na fila",
+  "@queuedCard": {
+    "placeholders": {
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "reviewChip": "Revisar ({count})",
+  "@reviewChip": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewTitle": "Revisar ({count})",
+  "@reviewTitle": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewEmpty": "Nenhuma carta na fila. Capture algumas no modo automático.",
+  "reviewConfirmAll": "Adicionar {count} à coleção",
+  "@reviewConfirmAll": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewAdded": "{count} cartas adicionadas à coleção.",
+  "@reviewAdded": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewDiscard": "Descartar",
+  "reviewDiscardTitle": "Descartar a fila?",
+  "reviewDiscardBody": "As cartas capturadas ainda não confirmadas serão perdidas.",
+  "pendingQueueBanner": "{count} cartas aguardando revisão",
+  "@pendingQueueBanner": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  },
+  "reviewAction": "Revisar"
 }

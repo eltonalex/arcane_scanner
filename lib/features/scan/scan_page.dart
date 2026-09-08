@@ -7,7 +7,9 @@ import 'package:image_picker/image_picker.dart';
 
 import '../../l10n/app_localizations.dart';
 import 'camera/camera_capture_page.dart';
+import 'review/review_page.dart';
 import 'scan_controller.dart';
+import 'scan_queue.dart';
 import 'widgets/card_result_panel.dart';
 
 class ScanPage extends ConsumerWidget {
@@ -48,6 +50,27 @@ class ScanPage extends ConsumerWidget {
       body: SafeArea(
         child: ListView(
           children: [
+            // Banner de fila pendente (capturas ainda não confirmadas).
+            if (ref.watch(scanQueueProvider).isNotEmpty)
+              Material(
+                color: theme.colorScheme.secondaryContainer,
+                child: ListTile(
+                  leading: Icon(Icons.inventory_2_outlined,
+                      color: theme.colorScheme.onSecondaryContainer),
+                  title: Text(
+                    l10n.pendingQueueBanner(
+                        ref.watch(scanQueueProvider).length),
+                    style: TextStyle(
+                        color: theme.colorScheme.onSecondaryContainer),
+                  ),
+                  trailing: FilledButton(
+                    onPressed: () => Navigator.of(context).push(
+                      MaterialPageRoute(builder: (_) => const ReviewPage()),
+                    ),
+                    child: Text(l10n.reviewAction),
+                  ),
+                ),
+              ),
             // Toggle do modo rápido
             SwitchListTile(
               contentPadding:

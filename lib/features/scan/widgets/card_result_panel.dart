@@ -17,10 +17,19 @@ class CardResultPanel extends ConsumerStatefulWidget {
     super.key,
     required this.result,
     required this.autoAdded,
+    this.onAfterAdd,
+    this.onSkip,
   });
 
   final IdentifiedCard result;
   final bool autoAdded;
+
+  /// Chamado após adicionar com sucesso. Usado no modo automático para
+  /// fechar a folha de confirmação e rearmar a câmera para a próxima carta.
+  final VoidCallback? onAfterAdd;
+
+  /// Chamado ao pular a carta (só aparece se fornecido — modo automático).
+  final VoidCallback? onSkip;
 
   @override
   ConsumerState<CardResultPanel> createState() => _CardResultPanelState();
@@ -52,6 +61,7 @@ class _CardResultPanelState extends ConsumerState<CardResultPanel> {
     messenger.showSnackBar(
       SnackBar(content: Text(l10n.addedToCollection(widget.result.card.name))),
     );
+    widget.onAfterAdd?.call();
   }
 
   @override
@@ -252,6 +262,14 @@ class _CardResultPanelState extends ConsumerState<CardResultPanel> {
           icon: const Icon(Icons.add),
           label: Text(l10n.addToCollection),
         ),
+        if (widget.onSkip != null) ...[
+          const SizedBox(height: 8),
+          TextButton.icon(
+            onPressed: widget.onSkip,
+            icon: const Icon(Icons.skip_next),
+            label: Text(l10n.skipCard),
+          ),
+        ],
       ],
     );
   }
