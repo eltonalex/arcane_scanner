@@ -153,5 +153,17 @@
       }
     }
   },
-  "reviewAction": "Revisar"
+  "reviewAction": "Revisar",
+  "groupBy": "Agrupar",
+  "groupNone": "Variantes separadas",
+  "groupPrinting": "Por impressão (junta foil/idioma)",
+  "groupCard": "Por carta (junta edições)",
+  "groupMultipleSets": "{count} edições",
+  "@groupMultipleSets": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
 }

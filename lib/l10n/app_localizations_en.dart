@@ -280,4 +280,21 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get reviewAction => 'Review';
+
+  @override
+  String get groupBy => 'Group';
+
+  @override
+  String get groupNone => 'Separate variants';
+
+  @override
+  String get groupPrinting => 'By printing (merge foil/language)';
+
+  @override
+  String get groupCard => 'By card (merge editions)';
+
+  @override
+  String groupMultipleSets(int count) {
+    return '$count editions';
+  }
 }

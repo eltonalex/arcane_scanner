@@ -280,4 +280,21 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get reviewAction => 'Revisar';
+
+  @override
+  String get groupBy => 'Agrupar';
+
+  @override
+  String get groupNone => 'Variantes separadas';
+
+  @override
+  String get groupPrinting => 'Por impressão (junta foil/idioma)';
+
+  @override
+  String get groupCard => 'Por carta (junta edições)';
+
+  @override
+  String groupMultipleSets(int count) {
+    return '$count edições';
+  }
 }

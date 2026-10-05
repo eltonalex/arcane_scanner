@@ -5,7 +5,8 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../l10n/app_localizations.dart';
 import 'collection_controller.dart';
-import 'widgets/collection_entry_tile.dart';
+import 'collection_grouping.dart';
+import 'widgets/collection_group_tile.dart';
 import 'widgets/collection_totals_header.dart';
 
 class CollectionPage extends ConsumerStatefulWidget {
@@ -83,7 +84,8 @@ class _CollectionPageState extends ConsumerState<CollectionPage> {
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final theme = Theme.of(context);
-    final entriesAsync = ref.watch(collectionEntriesProvider);
+    final groupedAsync = ref.watch(groupedCollectionProvider);
+    final groupMode = ref.watch(groupModeProvider).valueOrNull ?? GroupMode.none;
     final totalsAsync = ref.watch(collectionTotalsProvider);
     final setsAsync = ref.watch(collectionSetsProvider);
     final filter = ref.watch(collectionFilterProvider);
@@ -92,6 +94,35 @@ class _CollectionPageState extends ConsumerState<CollectionPage> {
       appBar: AppBar(
         title: Text(l10n.collectionTitle),
         actions: [
+          PopupMenuButton<GroupMode>(
+            tooltip: l10n.groupBy,
+            icon: Icon(
+              Icons.layers_outlined,
+              color: groupMode == GroupMode.none
+                  ? null
+                  : theme.colorScheme.secondary,
+            ),
+            initialValue: groupMode,
+            onSelected: (mode) =>
+                ref.read(groupModeProvider.notifier).set(mode),
+            itemBuilder: (context) => [
+              CheckedPopupMenuItem(
+                value: GroupMode.none,
+                checked: groupMode == GroupMode.none,
+                child: Text(l10n.groupNone),
+              ),
+              CheckedPopupMenuItem(
+                value: GroupMode.printing,
+                checked: groupMode == GroupMode.printing,
+                child: Text(l10n.groupPrinting),
+              ),
+              CheckedPopupMenuItem(
+                value: GroupMode.card,
+                checked: groupMode == GroupMode.card,
+                child: Text(l10n.groupCard),
+              ),
+            ],
+          ),
           IconButton(
             tooltip: l10n.exportCsv,
             icon: const Icon(Icons.ios_share),
@@ -180,9 +211,9 @@ class _CollectionPageState extends ConsumerState<CollectionPage> {
               ],
             ),
           ),
-          // Lista
+          // Lista (agrupada conforme o modo escolhido)
           Expanded(
-            child: entriesAsync.when(
+            child: groupedAsync.when(
               loading: () => const Center(child: CircularProgressIndicator()),
               error: (e, _) => Center(
                 child: Text(
@@ -190,8 +221,8 @@ class _CollectionPageState extends ConsumerState<CollectionPage> {
                   style: TextStyle(color: theme.colorScheme.error),
                 ),
               ),
-              data: (entries) {
-                if (entries.isEmpty) {
+              data: (groups) {
+                if (groups.isEmpty) {
                   return Center(
                     child: Padding(
                       padding: const EdgeInsets.all(32),
@@ -204,18 +235,17 @@ class _CollectionPageState extends ConsumerState<CollectionPage> {
                     ),
                   );
                 }
+                final repo = ref.read(collectionRepositoryProvider);
                 return ListView.builder(
                   padding: const EdgeInsets.only(bottom: 16),
-                  itemCount: entries.length,
+                  itemCount: groups.length,
                   itemBuilder: (context, index) {
-                    final entry = entries[index];
-                    final repo = ref.read(collectionRepositoryProvider);
-                    return CollectionEntryTile(
-                      key: ValueKey(entry.id),
-                      entry: entry,
-                      onQuantityChanged: (q) =>
-                          repo.setQuantity(entry.id!, q),
-                      onRemove: () => repo.remove(entry.id!),
+                    final group = groups[index];
+                    return CollectionGroupTile(
+                      key: ValueKey(group.key),
+                      group: group,
+                      onQuantityChanged: (id, q) => repo.setQuantity(id, q),
+                      onRemove: (id) => repo.remove(id),
                     );
                   },
                 );

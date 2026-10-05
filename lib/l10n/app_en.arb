@@ -153,5 +153,17 @@
       }
     }
   },
-  "reviewAction": "Review"
+  "reviewAction": "Review",
+  "groupBy": "Group",
+  "groupNone": "Separate variants",
+  "groupPrinting": "By printing (merge foil/language)",
+  "groupCard": "By card (merge editions)",
+  "groupMultipleSets": "{count} editions",
+  "@groupMultipleSets": {
+    "placeholders": {
+      "count": {
+        "type": "int"
+      }
+    }
+  }
 }

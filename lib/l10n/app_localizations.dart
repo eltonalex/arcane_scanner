@@ -604,6 +604,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Review'**
   String get reviewAction;
+
+  /// No description provided for @groupBy.
+  ///
+  /// In en, this message translates to:
+  /// **'Group'**
+  String get groupBy;
+
+  /// No description provided for @groupNone.
+  ///
+  /// In en, this message translates to:
+  /// **'Separate variants'**
+  String get groupNone;
+
+  /// No description provided for @groupPrinting.
+  ///
+  /// In en, this message translates to:
+  /// **'By printing (merge foil/language)'**
+  String get groupPrinting;
+
+  /// No description provided for @groupCard.
+  ///
+  /// In en, this message translates to:
+  /// **'By card (merge editions)'**
+  String get groupCard;
+
+  /// No description provided for @groupMultipleSets.
+  ///
+  /// In en, this message translates to:
+  /// **'{count} editions'**
+  String groupMultipleSets(int count);
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
